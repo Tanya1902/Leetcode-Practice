@@ -52,13 +52,15 @@ public:
         
         if(c1>n && (c2>n || res.size()==1))
             return res;
-            
-        if(c1<=n)
-            res.erase(res.begin());
         
-        if(c2<=n)
-            res.erase(res.end()-1); 
-            
-        return res;
+        vector<int> ans;
+        
+        if(c1<=n && c2>n)
+            ans.push_back(res[1]);
+        
+        if(c2<=n && c1>n)
+            ans.push_back(res[0]);
+        
+        return ans;
     }
 };
