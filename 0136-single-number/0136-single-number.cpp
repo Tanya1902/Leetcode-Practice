@@ -5,11 +5,17 @@ public:
         if(nums.size()==1)
             return nums[0];
         
-        sort(nums.begin(),nums.end());
-        for(int i=0;i<nums.size();i+=2){
-           if(nums[i]!=nums[i+1] || i==nums.size()-1)
-               return nums[i];
+        map<int,int> m;
+        
+        for(int i=0;i<nums.size();i++){
+           m[nums[i]]++;
         }
+        
+        for(auto e:m){
+           if(e.second==1)
+               return e.first;
+        }
+        
         return 0;
     }
 };
