@@ -1,2 +1,2 @@
 # Leetcode-Practice
-Collection of LeetCode questions I do for practice! 
+Collection of some LeetCode questions
